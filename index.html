@@ -40,7 +40,7 @@
                 
                 <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                     <button class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-full shadow-sm text-base font-medium dark-bg text-white terracotta-bg hover:bg-opacity-80 transition duration-300">
-                        Carrello (0)
+                        <a href="cart.html" class="... text-white ...">Cart</a>
                     </button>
                 </div>
             </div>
@@ -110,26 +110,29 @@
                 </h2>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    
-                    <!-- Prodotto Mobile 1 -->
-                    <article id="mobili" class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
-                        <img src="https://placehold.co/600x800/E0E0E0/333333?text=Sedia+Scandinava" alt="Sedia Scandinava in Legno Chiaro" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-500">
+                    <article id="furniture" class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
+                        <img src="img/chair.jpg" alt="Scandinavian Light Wood Chair" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-500">
                         <div class="p-5 text-center">
                             <h3 class="text-xl font-semibold dark-text">Nordic Chair</h3>
                             <p class="text-gray-500">Furniture • Solid wood</p>
                             <span class="block text-2xl font-bold mt-2 terracotta-text">€ 189</span>
-                            <button class="mt-4 px-6 py-2 border border-gray-300 rounded-full dark-text hover:dark-bg hover:text-white transition duration-300">Visualizza</button>
+                            <button class="add-to-cart-btn mt-4 px-6 py-2 border border-gray-300 rounded-full dark-text hover:dark-bg hover:text-white transition duration-300"
+                                data-id="nordic-chair" data-name="Nordic Chair" data-price="189">
+                                Add to Cart
+                            </button>
                         </div>
                     </article>
 
-                    <!-- Prodotto Abbigliamento 1 -->
-                    <article id="abbigliamento" class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
-                        <img src="https://placehold.co/600x800/C5C5C5/111111?text=Maglia+Lino" alt="Maglia Lino Grigia Minimalista" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-500">
+                    <article id="apparel" class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
+                        <img src="img/t-shirt.jpg" alt="Minimalist Grey Linen T-shirt" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-500">
                         <div class="p-5 text-center">
                             <h3 class="text-xl font-semibold dark-text">Essential Linen Shirt</h3>
                             <p class="text-gray-500">Apparel • Natural fibers</p>
                             <span class="block text-2xl font-bold mt-2 terracotta-text">€ 65</span>
-                            <button class="mt-4 px-6 py-2 border border-gray-300 rounded-full dark-text hover:dark-bg hover:text-white transition duration-300">Visualizza</button>
+                            <button class="add-to-cart-btn mt-4 px-6 py-2 border border-gray-300 rounded-full dark-text hover:dark-bg hover:text-white transition duration-300"
+                                data-id="linen-shirt" data-name="Essential Linen Shirt" data-price="65">
+                                Add to Cart
+                            </button>
                         </div>
                     </article>
 
@@ -139,7 +142,10 @@
                             <h3 class="text-xl font-semibold dark-text">Eclipse Lamp</h3>
                             <p class="text-gray-500">Furniture • Lighting</p>
                             <span class="block text-2xl font-bold mt-2 terracotta-text">€ 245</span>
-                            <button class="mt-4 px-6 py-2 border border-gray-300 rounded-full dark-text hover:dark-bg hover:text-white transition duration-300">Visualizza</button>
+                            <button class="add-to-cart-btn mt-4 px-6 py-2 border border-gray-300 rounded-full dark-text hover:dark-bg hover:text-white transition duration-300"
+                                data-id="eclipse-lamp" data-name="Eclipse Lamp" data-price="245">
+                                Add to Cart
+                            </button>
                         </div>
                     </article>
 
@@ -149,7 +155,10 @@
                             <h3 class="text-xl font-semibold dark-text">Utility Trousers</h3>
                             <p class="text-gray-500">Apparel • Organic cotton</p>
                             <span class="block text-2xl font-bold mt-2 terracotta-text">€ 99</span>
-                            <button class="mt-4 px-6 py-2 border border-gray-300 rounded-full dark-text hover:dark-bg hover:text-white transition duration-300">Visualizza</button>
+                            <button class="add-to-cart-btn mt-4 px-6 py-2 border border-gray-300 rounded-full dark-text hover:dark-bg hover:text-white transition duration-300"
+                                data-id="utility-trousers" data-name="Utility Trousers" data-price="99">
+                                Add to Cart
+                            </button>
                         </div>
                     </article>
                 </div>
@@ -188,8 +197,8 @@
 
                 <div class="space-y-6">
                     <div class="flex items-center justify-center">
-                        <svg class="w-6 h-6 terracotta-text mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        <span class="text-lg">info@viveremoderno.it</span>
+                        <img src="icon/email.svg" alt="Instagram" class="w-6 h-6"> 
+                        <span class="text-lg">info@modernliving.it</span>
                     </div>
                     <div class="flex items-center justify-center">
                         <img src="icon/phone.svg" alt="Instagram" class="w-6 h-6"> 
@@ -235,13 +244,11 @@
                     <h4 class="text-lg font-semibold mb-4 terracotta-text">Follow Us</h4>
                     <div class="flex space-x-4">
                         <a href="#" aria-label="Instagram" class="hover:terracotta-text">
-                            <!-- Icona Instagram fittizia -->
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8 2h8.4C18.1 2 20 3.9 20 6.2v8.4c0 2.3-1.9 4.2-4.2 4.2H7.8C5.5 19 3.6 17.1 3.6 14.8V6.2C3.6 3.9 5.5 2 7.8 2zm1.6 2.4c-.9 0-1.6.7-1.6 1.6s.7 1.6 1.6 1.6 1.6-.7 1.6-1.6-.7-1.6-1.6-1.6zm6.3 3.9c-2.4 0-4.3 1.9-4.3 4.3s1.9 4.3 4.3 4.3 4.3-1.9 4.3-4.3-1.9-4.3-4.3-4.3zM16 13.5c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5z"/></svg>
+                            <img src="icon/instagram.svg" alt="Instagram" class="w-6 h-6"> 
                         </a>
                         
                         <a href="#" aria-label="Facebook" class="hover:terracotta-text">
-                            <!-- Icona Facebook fittizia -->
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14 13.5h2.5l1-4H14v-2c0-1.1.5-2 2-2h3V3H16c-3.1 0-5 1.7-5 4.8V11H7v2.5h4V22h4v-8.5z"/></svg>
+                            <img src="icon/facebook.svg" alt="Facebook" class="w-6 h-6">
                         </a>
                     </div>
                 </div>

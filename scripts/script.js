@@ -57,7 +57,49 @@ document.addEventListener('DOMContentLoaded', () => {
         parallaxSection.style.backgroundPosition = `center calc(50% + ${movement}px)`;
     };
 
-    // Aggiunge il listener di scroll
+    // --- 4. Cart Logic (Added to script.js) ---
+
+    const initializeCart = () => {
+        // Check if cart exists in localStorage, if not, create it
+        if (!localStorage.getItem('cart')) {
+            localStorage.setItem('cart', JSON.stringify([]));
+        }
+    };
+
+    const addToCart = (product) => {
+        const cart = JSON.parse(localStorage.getItem('cart'));
+        
+        // Check if the item already exists in the cart
+        const existingItemIndex = cart.findIndex(item => item.id === product.id);
+
+        if (existingItemIndex > -1) {
+            // Item exists, just increment quantity
+            cart[existingItemIndex].quantity += 1;
+        } else {
+            // Item is new, add it with quantity 1
+            cart.push({ ...product, quantity: 1 });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${product.name} added to cart!`); // Simple confirmation
+    };
+
+    // Attach listeners to all "Add to Cart" buttons
+    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const product = {
+                id: button.dataset.id,
+                name: button.dataset.name,
+                price: parseFloat(button.dataset.price)
+            };
+            addToCart(product);
+        });
+    });
+
+    // Initialize cart state when the page loads
+    initializeCart();
+
+    // Add the scroll listener
     window.addEventListener('scroll', handleParallax);
 
     // Execute the handler initially to set the correct starting position
