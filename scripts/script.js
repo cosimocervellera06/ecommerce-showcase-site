@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Riferimenti agli elementi
+    // References to the elements
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     const parallaxSection = document.querySelector('.parallax-section');
@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const slideCount = slides.length;
     let currentIndex = 0;
 
-    // --- 1. Interazione Mobile Menu ---
+    // --- 1. Mobile Menu Interaction ---
     mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
 
-    // Chiudi il menu mobile quando si clicca su un link (UX)
+    // Close the mobile menu when a link is clicked (UX)
     document.querySelectorAll('#mobile-menu a').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.add('hidden');
@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // --- 2. Carousel per l'Hero Section ---
+    // --- 2. Carousel for the Hero Section ---
     const updateCarousel = () => {
-        // Calcola la traslazione necessaria in percentuale (es. 0%, -100%, -200%)
+        // Calculate the necessary translation in percentage (e.g., 0%, -100%, -200%)
         const offset = currentIndex * -100;
         carouselContainer.style.transform = `translateX(${offset}%)`;
     };
@@ -33,33 +33,33 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCarousel();
     };
     
-    // Inizializza l'animazione automatica ogni 4 secondi
+    // Initialize automatic animation every 4 seconds
     setInterval(nextSlide, 4000);
 
 
-    // --- 3. Effetto Parallax Sottile ---
+    // --- 3. Subtle Parallax Effect ---
     const handleParallax = () => {
         if (!parallaxSection) return;
 
-        // Ottiene la posizione corrente di scroll
+        // Get the current scroll position
         const scrollTop = window.pageYOffset;
-        // Ottiene la posizione della sezione rispetto alla parte superiore della viewport
+        // Get the section's position relative to the top of the viewport
         const rect = parallaxSection.getBoundingClientRect();
 
-        // Calcola quanto la sezione è visibile o scrollata.
-        // Questo valore viene mappato per muovere lo sfondo leggermente.
-        // Il fattore 0.1 definisce la forza dell'effetto (più basso = più sottile).
+        // Calculate how much the section is visible or scrolled.
+        // This value is mapped to slightly move the background.
+        // The factor 0.1 defines the strength of the effect (lower = more subtle).
         const yOffset = scrollTop + rect.top;
         const movement = yOffset * 0.1;
 
-        // Applica un piccolo movimento verticale allo sfondo per l'effetto parallax
-        // Si muove 50% (centro) + 0.1 * scroll
+        // Apply a small vertical movement to the background for the parallax effect
+        // Moves 50% (center) + 0.1 * scroll
         parallaxSection.style.backgroundPosition = `center calc(50% + ${movement}px)`;
     };
 
-    // Aggiunge il listener di scroll
+    // Add the scroll listener
     window.addEventListener('scroll', handleParallax);
 
-    // Esegue l'handler all'inizio per impostare la posizione iniziale corretta
+    // Execute the handler initially to set the correct starting position
     handleParallax();
 });
