@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Modern Living</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/style.css"> 
+</head>
+<body class="light-bg">
+
+    <header class="dark-bg text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex justify-start">
+                    <a href="index.html" class="text-2xl font-black tracking-widest uppercase terracotta-text">
+                        Modern Living
+                    </a>
+                </div>
+                <nav class="space-x-10">
+                    <a href="index.html" class="text-base font-medium hover:terracotta-text transition duration-200">← Back to Shop</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-extrabold dark-text mb-10 text-center">Your Shopping Cart</h1>
+            
+            <div id="cart-items-container" class="bg-white rounded-xl shadow-xl overflow-hidden divide-y divide-gray-200">
+                <p id="empty-cart-message" class="p-8 text-center text-xl text-gray-500 hidden">
+                    Your cart is empty. Start shopping now!
+                </p>
+            </div>
+
+            <div class="mt-8 p-6 bg-white rounded-xl shadow-xl">
+                <div class="flex justify-between text-2xl font-semibold dark-text border-t pt-4">
+                    <span>Total:</span>
+                    <span id="cart-total" class="terracotta-text">€ 0.00</span>
+                </div>
+                <button class="w-full mt-6 px-8 py-4 terracotta-bg dark-text font-semibold rounded-lg shadow-lg hover:bg-opacity-90 transition duration-300 text-lg uppercase">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="cart-logic.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         
 :root {
-    --color-terracotta: #A54F3F; /* Colore accento */
+    --color-terracotta: #A54F3F; /* Accent color */
     --color-dark: #1A1A1A;
     --color-light-grey: #F5F5F5;
 }
@@ -19,11 +19,11 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Stile Custom per l'effetto Parallax */
+/* Custom Style for the Parallax Effect */
 .parallax-section {
-    background-image: url('https://placehold.co/1920x800/222222/cccccc?text=Design+Minimalista');
-    background-attachment: fixed; /* L'ingrediente segreto del parallax */
+    background-image: url('../img/minimalist-design.jpg');
+    background-attachment: fixed; /* The secret ingredient for parallax */
     background-size: cover;
-    background-position: center 50%; /* Centro iniziale */
+    background-position: center 50%; /* Initial center */
     transition: background-position 0.1s ease-out;
 }
