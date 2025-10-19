@@ -27,3 +27,17 @@ body {
     background-position: center 50%; /* Initial center */
     transition: background-position 0.1s ease-out;
 }
+
+.remove-button {
+    color: var(--color-terracotta);
+    border: 1px solid var(--color-terracotta);
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px; /* Tailwind's full rounded */
+    font-size: 0.875rem; /* Tailwind's sm */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.remove-button:hover {
+    background-color: var(--color-terracotta);
+    color: white;
+}
