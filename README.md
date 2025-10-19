@@ -22,18 +22,15 @@ This concept focuses on high-quality design, simplicity, and core e-commerce fun
 ## 🚀 Structure and Technologies
 
 The project follows a standard file structure:
-ecommerce-showcase-site/ 
-├── index.html # Homepage (Main Landing Page) 
-├── cart.html # Shopping Cart Page 
-├── styles/ 
-    │ 
-    └── style.css # Custom CSS for colors and parallax 
-├── scripts/ 
-    │ 
-    ├── script.js # Homepage JS: Mobile menu, Carousel, Add to Cart logic 
-    │ 
-    └── cart-logic.js # Cart Page JS: Renders cart items and handles removal logic 
-└── img/ # (Placeholder for images used in the project) 
+ecommerce-showcase-site/
+├── cart.html                  # Shopping Cart Page
+├── index.html                 # Homepage (Main Landing Page)
+├── img/                       # Placeholder for images used in the project
+├── scripts/
+│   ├── cart-logic.js          # Cart Page JS: Renders cart items and handles removal logic
+│   └── script.js              # Homepage JS: Mobile menu, Carousel, Add to Cart logic
+└── styles/
+    └── style.css              # Custom CSS for colors and parallax
 
 ### Technologies Used
 
