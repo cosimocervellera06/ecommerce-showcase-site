@@ -6,7 +6,7 @@
 
 This concept focuses on high-quality design, simplicity, and core e-commerce functionalities like a persistent shopping cart (using `localStorage`).
 
-## ✨ Features
+## Features
 
 * **Responsive Design:** Built using Tailwind CSS for a fluid experience on desktop, tablet, and mobile devices.
 * **Minimalist Aesthetic:** Uses a dark palette (`#1A1A1A`) accented with a terracotta color (`#A54F3F`) for a sophisticated look.
@@ -19,18 +19,18 @@ This concept focuses on high-quality design, simplicity, and core e-commerce fun
     * A dedicated cart page (`cart.html`) displays items, quantity, subtotals, and a grand total.
     * Ability to **remove** individual items from the cart.
 
-## 🚀 Structure and Technologies
+## Structure and Technologies
 
-The project follows a standard file structure:
-ecommerce-showcase-site/
-├── cart.html                  # Shopping Cart Page
-├── index.html                 # Homepage (Main Landing Page)
-├── img/                       # Placeholder for images used in the project
-├── scripts/
-│   ├── cart-logic.js          # Cart Page JS: Renders cart items and handles removal logic
-│   └── script.js              # Homepage JS: Mobile menu, Carousel, Add to Cart logic
-└── styles/
-    └── style.css              # Custom CSS for colors and parallax
+The project follows a standard, organized file structure:
+
+* **`index.html`**: Homepage and Main Landing Page.
+* **`cart.html`**: Dedicated Shopping Cart Page.
+* **`img/`**: Placeholder directory for all image assets used in the project.
+* **`scripts/`**: Contains all project-specific JavaScript logic.
+    * `script.js`: Handles Homepage functionalities (Mobile menu, Carousel, **Add to Cart** logic).
+    * `cart-logic.js`: Handles Cart Page functionalities (Renders cart items, calculates total, and manages **item removal**).
+* **`styles/`**: Contains project-specific CSS.
+    * `style.css`: Custom CSS for color variables, fonts, and the Parallax effect.
 
 ### Technologies Used
 
@@ -42,7 +42,7 @@ ecommerce-showcase-site/
 | **JavaScript (ES6)** | Core interactions: Carousel, Parallax calculation, and `localStorage` Cart Management. |
 | **Font Awesome (CDN)** | Social media icons in the footer. |
 
-## 🛠️ Setup and Installation
+## Setup and Installation
 
 This is a front-end static project and requires no server-side setup.
 
@@ -52,7 +52,7 @@ This is a front-end static project and requires no server-side setup.
 
 > **Note:** Due to browser security restrictions, the `background-attachment: fixed` property (used for the parallax effect) might behave inconsistently when opening files locally using the `file://` protocol. For best results, use a simple local server extension (like "Live Server" for VS Code).
 
-## 💡 Customizing the Project
+## Customizing the Project
 
 * **Colors:** Modify the CSS variables in `styles/style.css` to change the main color scheme:
     * `--color-terracotta`
