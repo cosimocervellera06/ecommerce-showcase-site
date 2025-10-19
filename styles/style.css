@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+:root {
+    --color-terracotta: #A54F3F; /* Colore accento */
+    --color-dark: #1A1A1A;
+    --color-light-grey: #F5F5F5;
+}
+
+.terracotta-bg { background-color: var(--color-terracotta); }
+.terracotta-text { color: var(--color-terracotta); }
+.dark-bg { background-color: var(--color-dark); }
+.dark-text { color: var(--color-dark); }
+.light-bg { background-color: var(--color-light-grey); }
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-dark);
+    background-color: white;
+    scroll-behavior: smooth;
+}
+
+/* Stile Custom per l'effetto Parallax */
+.parallax-section {
+    background-image: url('https://placehold.co/1920x800/222222/cccccc?text=Design+Minimalista');
+    background-attachment: fixed; /* L'ingrediente segreto del parallax */
+    background-size: cover;
+    background-position: center 50%; /* Centro iniziale */
+    transition: background-position 0.1s ease-out;
+}

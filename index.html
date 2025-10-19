@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivere Moderno | Design e Stile per la Casa e l'Abbigliamento</title>
+    <!-- Descrizione SEO -->
+    <meta name="description" content="Esplora la collezione Vivere Moderno di mobili di design minimalista e abbigliamento contemporaneo. Stile impeccabile e sostenibile per la tua vita.">
+    <meta name="keywords" content="design, mobili, arredamento, abbigliamento, moderno, minimalista, sostenibile, e-commerce concept">
+    
+    <!-- Caricamento di Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <!-- Intestazione e Navigazione (SEO: Struttura chiara e persistente) -->
+    <header class="sticky top-0 z-50 dark-bg text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+                <!-- Logo/Brand Name (h1 invisibile per SEO) -->
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                    <a href="#" class="text-2xl font-black tracking-widest uppercase terracotta-text">
+                        Vivere Moderno
+                    </a>
+                </div>
+
+                <!-- Navigazione Desktop -->
+                <nav class="hidden md:flex space-x-10">
+                    <a href="#home" class="text-base font-medium hover:terracotta-text transition duration-200">Home</a>
+                    <a href="#mobili" class="text-base font-medium hover:terracotta-text transition duration-200">Mobili</a>
+                    <a href="#abbigliamento" class="text-base font-medium hover:terracotta-text transition duration-200">Abbigliamento</a>
+                    <a href="#contatti" class="text-base font-medium hover:terracotta-text transition duration-200">Contatti</a>
+                </nav>
+
+                <!-- Icone (Carrello fittizio e Menu Mobile) -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:terracotta-text focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                        <!-- Icona SVG Menu -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Azione (CTA fittizia) -->
+                <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                    <button class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-full shadow-sm text-base font-medium dark-bg text-white terracotta-bg hover:bg-opacity-80 transition duration-300">
+                        Carrello (0)
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile a Scomparsa (gestito da JS) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full dark-bg shadow-2xl transition duration-300 ease-in-out">
+            <div class="pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:terracotta-text">Home</a>
+                <a href="#mobili" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:terracotta-text">Mobili</a>
+                <a href="#abbigliamento" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:terracotta-text">Abbigliamento</a>
+                <a href="#contatti" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:terracotta-text">Contatti</a>
+                <button class="w-full mt-4 text-center px-4 py-2 border border-transparent rounded-full shadow-sm text-base font-medium dark-bg text-white terracotta-bg hover:bg-opacity-80 transition duration-300">Carrello (0)</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- Sezione Hero con Carosello (Animazione JS) -->
+        <section id="home" class="relative overflow-hidden w-full h-[60vh] md:h-[80vh] dark-bg">
+            <!-- Contenitore Immagini Carosello -->
+            <div id="carousel-container" class="absolute inset-0 flex transition-transform duration-700 ease-in-out">
+                <!-- Slide 1: Soggiorno -->
+                <div class="carousel-slide w-full flex-shrink-0 relative">
+                    <img src="https://placehold.co/1920x800/383838/CCCCCC?text=Design+Soggiorno" alt="Design Soggiorno Minimalista" class="object-cover w-full h-full opacity-60">
+                </div>
+                <!-- Slide 2: Abbigliamento -->
+                <div class="carousel-slide w-full flex-shrink-0 relative">
+                    <img src="https://placehold.co/1920x800/4F4F4F/EEEEEE?text=Moda+Contemporanea" alt="Collezione Moda Contemporanea" class="object-cover w-full h-full opacity-60">
+                </div>
+                <!-- Slide 3: Dettaglio Mobile -->
+                <div class="carousel-slide w-full flex-shrink-0 relative">
+                    <img src="https://placehold.co/1920x800/2C2C2C/AAAAAA?text=Dettaglio+Artigianale" alt="Dettaglio Artigianale di Arredo" class="object-cover w-full h-full opacity-60">
+                </div>
+            </div>
+
+            <!-- Contenuto in Primo Piano -->
+            <div class="absolute inset-0 flex items-center justify-center p-6 text-center">
+                <div class="max-w-3xl text-white">
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold mb-4 leading-tight">
+                        <span class="terracotta-text">Design</span> che Ispira la Tua Vita
+                    </h1>
+                    <p class="text-xl sm:text-2xl mb-8 font-light opacity-90">
+                        Scopri l'armonia tra forma e funzione. Mobili senza tempo e abbigliamento essenziale.
+                    </p>
+                    <a href="#prodotti" class="inline-block px-8 py-3 bg-white terracotta-text font-semibold rounded-full shadow-xl hover:bg-opacity-90 transform hover:scale-[1.02] transition duration-300">
+                        Scopri le Novità
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione 1: Visione e Filosofia (Design pulito) -->
+        <section class="py-16 md:py-24 light-bg">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <!-- H2 per SEO -->
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 dark-text">
+                    La Nostra Filosofia: Minimalismo Consapevole
+                </h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                    Vivere Moderno non è solo un negozio, è una curatela di oggetti che celebrano la semplicità, la qualità e la sostenibilità. Ogni pezzo è scelto per la sua capacità di migliorare lo spazio e la vita di chi lo possiede, riducendo il superfluo e valorizzando l'essenziale.
+                </p>
+                <div class="mt-8">
+                    <a href="#" class="terracotta-text font-medium hover:underline transition duration-200">
+                        Leggi la nostra storia →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione 2: Prodotti in Evidenza (Grid Responsive) -->
+        <section id="prodotti" class="py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold dark-text mb-12 text-center">
+                    Prodotti Selezionati per Te
+                </h2>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Prodotto Mobile 1 -->
+                    <article id="mobili" class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
+                        <img src="https://placehold.co/600x800/E0E0E0/333333?text=Sedia+Scandinava" alt="Sedia Scandinava in Legno Chiaro" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-500">
+                        <div class="p-5 text-center">
+                            <h3 class="text-xl font-semibold dark-text">Sedia 'Nordic'</h3>
+                            <p class="text-gray-500">Mobili • Legno massello</p>
+                            <span class="block text-2xl font-bold mt-2 terracotta-text">€ 189</span>
+                            <button class="mt-4 px-6 py-2 border border-gray-300 rounded-full dark-text hover:dark-bg hover:text-white transition duration-300">Visualizza</button>
+                        </div>
+                    </article>
+
+                    <!-- Prodotto Abbigliamento 1 -->
+                    <article id="abbigliamento" class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
+                        <img src="https://placehold.co/600x800/C5C5C5/111111?text=Maglia+Lino" alt="Maglia Lino Grigia Minimalista" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-500">
+                        <div class="p-5 text-center">
+                            <h3 class="text-xl font-semibold dark-text">Maglia 'Lino Essential'</h3>
+                            <p class="text-gray-500">Abbigliamento • Fibre naturali</p>
+                            <span class="block text-2xl font-bold mt-2 terracotta-text">€ 65</span>
+                            <button class="mt-4 px-6 py-2 border border-gray-300 rounded-full dark-text hover:dark-bg hover:text-white transition duration-300">Visualizza</button>
+                        </div>
+                    </article>
+
+                    <!-- Prodotto Mobile 2 -->
+                    <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
+                        <img src="https://placehold.co/600x800/A0A0A0/000000?text=Lampada+Metallo" alt="Lampada da Terra in Metallo Nero" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-500">
+                        <div class="p-5 text-center">
+                            <h3 class="text-xl font-semibold dark-text">Lampada 'Eclipse'</h3>
+                            <p class="text-gray-500">Mobili • Illuminazione</p>
+                            <span class="block text-2xl font-bold mt-2 terracotta-text">€ 245</span>
+                            <button class="mt-4 px-6 py-2 border border-gray-300 rounded-full dark-text hover:dark-bg hover:text-white transition duration-300">Visualizza</button>
+                        </div>
+                    </article>
+
+                    <!-- Prodotto Abbigliamento 2 -->
+                    <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
+                        <img src="https://placehold.co/600x800/F0F0F0/333333?text=Pantaloni+Casual" alt="Pantaloni Casual Bianchi" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-500">
+                        <div class="p-5 text-center">
+                            <h3 class="text-xl font-semibold dark-text">Pantaloni 'Utility'</h3>
+                            <p class="text-gray-500">Abbigliamento • Cotone organico</p>
+                            <span class="block text-2xl font-bold mt-2 terracotta-text">€ 99</span>
+                            <button class="mt-4 px-6 py-2 border border-gray-300 rounded-full dark-text hover:dark-bg hover:text-white transition duration-300">Visualizza</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sezione Parallax (Animazione JS & CTA) -->
+        <section class="parallax-section h-[60vh] flex items-center justify-center text-center p-8 relative">
+            <div class="absolute inset-0 bg-dark-bg opacity-40"></div>
+            <div class="relative z-10 text-white max-w-4xl">
+                <p class="text-xl font-light mb-4 terracotta-text uppercase tracking-widest">
+                    Novità in Arrivo
+                </p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold mb-6">
+                    Iscriviti e Ricevi l'Anteprima Esclusiva
+                </h2>
+                <p class="text-lg mb-8 opacity-90">
+                    Non perderti le nostre collezioni stagionali. Design all'avanguardia prima di tutti.
+                </p>
+                <!-- Form fittizio per l'iscrizione -->
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <input type="email" placeholder="Inserisci la tua email" class="px-5 py-3 rounded-full dark-bg text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-terracotta sm:w-80" aria-label="Inserisci la tua email">
+                    <button class="px-8 py-3 terracotta-bg dark-text font-semibold rounded-full shadow-lg hover:bg-opacity-90 transform hover:scale-[1.02] transition duration-300">
+                        Iscriviti Ora
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Contatti (SEO: Accessibilità e informazioni chiare) -->
+        <section id="contatti" class="py-16 md:py-24 light-bg">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold dark-text mb-6">
+                    Contattaci
+                </h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    Siamo a tua disposizione per qualsiasi domanda su prodotti, ordini e la nostra filosofia.
+                </p>
+
+                <div class="space-y-6">
+                    <div class="flex items-center justify-center">
+                        <svg class="w-6 h-6 terracotta-text mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <span class="text-lg">info@viveremoderno.it</span>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <svg class="w-6 h-6 terracotta-text mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-3.28a2 2 0 01-2-2 15.044 15.044 0 01-5.5-5.5A2 2 0 015 12.72V9.72z"></path></svg>
+                        <span class="text-lg">+39 0123 456789</span>
+                    </div>
+                    <address class="not-italic text-gray-600 pt-4">
+                        Via del Design, 10 • 20100 Milano, Italia
+                    </address>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="dark-bg text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Colonna 1: Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 terracotta-text">Informazioni</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:terracotta-text">Chi Siamo</a></li>
+                        <li><a href="#" class="hover:terracotta-text">Lavora con Noi</a></li>
+                        <li><a href="#" class="hover:terracotta-text">Sostenibilità</a></li>
+                    </ul>
+                </div>
+                <!-- Colonna 2: Servizio Clienti -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 terracotta-text">Assistenza</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:terracotta-text">FAQ</a></li>
+                        <li><a href="#" class="hover:terracotta-text">Resi e Rimborsi</a></li>
+                        <li><a href="#" class="hover:terracotta-text">Spedizioni</a></li>
+                    </ul>
+                </div>
+                <!-- Colonna 3: Legale -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 terracotta-text">Legale</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:terracotta-text">Termini e Condizioni</a></li>
+                        <li><a href="#" class="hover:terracotta-text">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:terracotta-text">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Colonna 4: Social Media -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 terracotta-text">Seguici</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Instagram" class="hover:terracotta-text">
+                            <!-- Icona Instagram fittizia -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8 2h8.4C18.1 2 20 3.9 20 6.2v8.4c0 2.3-1.9 4.2-4.2 4.2H7.8C5.5 19 3.6 17.1 3.6 14.8V6.2C3.6 3.9 5.5 2 7.8 2zm1.6 2.4c-.9 0-1.6.7-1.6 1.6s.7 1.6 1.6 1.6 1.6-.7 1.6-1.6-.7-1.6-1.6-1.6zm6.3 3.9c-2.4 0-4.3 1.9-4.3 4.3s1.9 4.3 4.3 4.3 4.3-1.9 4.3-4.3-1.9-4.3-4.3-4.3zM16 13.5c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="hover:terracotta-text">
+                            <!-- Icona Facebook fittizia -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14 13.5h2.5l1-4H14v-2c0-1.1.5-2 2-2h3V3H16c-3.1 0-5 1.7-5 4.8V11H7v2.5h4V22h4v-8.5z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-gray-700 text-center text-sm text-gray-500">
+                &copy; 2025 Vivere Moderno. Concept E-commerce. Tutti i diritti riservati.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
