@@ -21,8 +21,8 @@ body {
 
 /* Custom Style for the Parallax Effect */
 .parallax-section {
-    background-image: url('../img/minimalist-design.jpg');
-    background-attachment: fixed; /* The secret ingredient for parallax */
+    background-image: url('https://placehold.co/1920x800/222222/cccccc?text=Design+Minimalista');
+    background-attachment: fixed; /* L'ingrediente segreto del parallax */
     background-size: cover;
     background-position: center 50%; /* Initial center */
     transition: background-position 0.1s ease-out;
